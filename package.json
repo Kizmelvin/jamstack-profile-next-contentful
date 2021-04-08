@@ -1,0 +1,21 @@
+{
+  "name": "my-next-project",
+  "version": "1.0.0",
+  "description": "Next project with cassidy",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "chidi eze",
+  "license": "ISC",
+  "dependencies": {
+    "contentful": "^8.2.0",
+    "moment": "^2.29.1",
+    "next": "^10.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-moment": "^1.1.1"
+  }
+}
