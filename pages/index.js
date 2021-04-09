@@ -52,6 +52,7 @@ function Home({ talksContents, articleContents, links, details }) {
           <HeroDivs details={details} />
         </div>
       </div>
+      {/* <div style={{ backgroundColor: "red" }}>view talks --</div> */}
       <div className="pengs">
         <div>{Left}</div>
         <div className="center">{Center}</div>

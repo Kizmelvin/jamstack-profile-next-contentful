@@ -4,6 +4,7 @@
   --PrimaryBlack: #000;
   --SecondaryBlack: #000000;
   --MainTransition: all ease 2s;
+  --SecondaryTransition: all ease 1s;
 }
 
 body {
@@ -49,7 +50,7 @@ a {
   cursor: pointer;
 }
 li {
-  margin: 5px 15px;
+  margin: 5px 12px;
   list-style-type: none;
   font-weight: 500;
 }
@@ -67,7 +68,8 @@ li :hover {
   align-items: center;
 }
 .main {
-  padding: 5rem;
+  padding: 1rem;
+  margin-top: 4rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -75,7 +77,6 @@ li :hover {
   align-items: center;
 }
 nav {
-  /* background: transparent; */
   color: var(--PrimaryBlack);
   display: flex;
   align-items: center;
@@ -196,7 +197,7 @@ nav {
 .list-pbtn {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .art-list p,
 .talk-list p {
@@ -205,7 +206,7 @@ nav {
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
-  width: 70%;
+  width: 90%;
   margin-top: -1%;
   letter-spacing: -0.01em;
   color: rgba(0, 0, 0, 0.7);
@@ -221,16 +222,16 @@ nav {
   /* background-color: aqua; */
   background: rgba(239, 244, 245, 0.972);
   padding: 0.3rem;
-
+  width: 100px;
   color: #4f5157;
 }
 .view-more:hover {
-  transition: var(--MainTransition);
+  transition: var(--SecondaryTransition);
   width: 9%;
 }
 .read-more:hover {
   width: 9%;
-  transition: var(--MainTransition);
+  transition: var(--SecondaryTransition);
 }
 .date {
   font-family: var(--PrimaryFF);
@@ -272,17 +273,13 @@ hr {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: -70px;
+  margin-top: -20px;
 }
 .about-div {
-  width: 80%;
+  width: 90%;
 }
 
 @media (max-width: 480px) {
-  .about img {
-    height: 400px;
-    width: 300px;
-  }
   .about-div {
     display: flex;
     flex-direction: column;
@@ -306,11 +303,11 @@ hr {
   .heroDiv-section div {
     width: 80%;
   }
-  .header_section img {
+  /* .header_section img {
     width: 100%;
     height: 100%;
     margin-left: 10%;
-  }
+  } */
   .heroDiv-section div:not(:first-child) {
     display: none;
   }
@@ -334,8 +331,8 @@ hr {
     text-align: center;
   }
   .pg-img img {
-    width: 350px;
-    height: 330px;
+    width: 98%;
+    height: 100%;
     margin-left: 5%;
   }
   .art-list,
@@ -364,7 +361,7 @@ hr {
     position: absolute;
     /* bottom: 1%; */
     top: 0;
-    left: 14%;
+    left: 15%;
     text-align: center;
     font-size: medium;
   }
@@ -377,10 +374,10 @@ hr {
 }
 
 @media (max-width: 768px) {
-  .about img {
-    height: 600px;
-    width: 500px;
-  }
+  /* .about img {
+    height: 80%;
+    width: 70%;
+  } */
   .about-div {
     display: flex;
     flex-direction: column;
@@ -405,14 +402,12 @@ hr {
     width: 80%;
   }
   .header_section img {
-    width: 70%;
-    height: 80%;
-    margin-left: 10%;
+    width: 100%;
+    height: 100%;
   }
   .heroDiv-section div:not(:first-child) {
     display: none;
   }
-
   .intro p {
     width: 70%;
     text-align: center;
@@ -431,7 +426,7 @@ hr {
   }
   .art-list h3,
   .talk-list h3 {
-    font-size: xx-large;
+    font-size: x-large;
   }
 }
 @media (max-width: 1024px) {
@@ -457,7 +452,7 @@ hr {
   }
   .header_section img {
     margin-left: 40%;
-    width: 75%;
+    width: 90%;
     height: 90%;
   }
 }
