@@ -2,7 +2,7 @@ import ArticleList from "../../components/ArticleList";
 import SocialLinks from "../../components/SocialLinks";
 import Client from "../../contentful/Contentful";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const data = await Client.getEntries({
     content_type: "blogPostArticle",
   });

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { createClient } from \"contentful\";\nconst Client = createClient({\n  accessToken: \"8QL6d7ViHyhY3g29-Iy5DHH18XCT8W3CMDV_Q-dafMs\",\n  space: \"tbpou4ypel8r\"\n});\nexport default Client;","map":null,"metadata":{},"sourceType":"module"}
