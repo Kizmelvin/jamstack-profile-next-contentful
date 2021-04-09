@@ -5,22 +5,22 @@ function Nav() {
     <ul>
       <li>
         <Link href="/">
-          <a onClick={() => setShowNav(false)}>Home</a>
+          <a>Home</a>
         </Link>
       </li>
       <li>
         <Link href="/about">
-          <a onClick={() => setShowNav(false)}>About</a>
+          <a>About</a>
         </Link>
       </li>
       <li>
         <Link href="/talks">
-          <a onClick={() => setShowNav(false)}>Talks</a>
+          <a>Talks</a>
         </Link>
       </li>
       <li>
         <Link href="/articles">
-          <a onClick={() => setShowNav(false)}>Articles</a>
+          <a>Articles</a>
         </Link>
       </li>
     </ul>

@@ -6,6 +6,7 @@ import TalksList from "../components/TalksList";
 import { Left, Center } from "../components/Svgs";
 
 export async function getStaticProps() {
+  // getting datatypes from contentful
   const data = await Client.getEntries({
     content_type: "blogPost",
   });
@@ -38,16 +39,15 @@ export async function getStaticProps() {
 }
 
 function Home({ talksContents, articleContents, links, details }) {
-  console.log(details);
-
   return (
     <>
       <div className="header_section">
-        <img
+        {/* <img
           src={details[0].fields.image.fields.file.url}
           alt={details[0].fields.image.fields.file.description}
           style={{ filter: "grayscale(100%)" }}
-        />
+        /> */}
+        <img src="/homeimg.jpg" alt="avatar" />
         <div>
           <HeroDivs details={details} />
         </div>

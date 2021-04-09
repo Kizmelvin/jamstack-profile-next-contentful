@@ -2,7 +2,7 @@ import ArticleList from "../../components/ArticleList";
 import SocialLinks from "../../components/SocialLinks";
 import Client from "../../contentful/Contentful";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await Client.getEntries({
     content_type: "blogPostArticle",
   });
@@ -13,11 +13,11 @@ export async function getStaticProps() {
     content_type: "blogLinks",
   });
 
-  if (!data || !data1) {
-    return {
-      notFound: true,
-    };
-  }
+  // if (!data || !data1) {
+  //   return {
+  //     notFound: true,
+  //   };
+  // }
 
   return {
     props: {

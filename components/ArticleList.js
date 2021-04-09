@@ -10,7 +10,7 @@ function ArticleList({ details, articleContents }) {
             <img
               src="https://images.unsplash.com/photo-1521079299535-94854b0a7b27?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjk4fHx3cml0ZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
               alt={details[0].fields.image.fields.file.description}
-              style={{ filter: "grayscale(100%)" }}
+              // style={{ filter: "grayscale(100%)" }}
             />
           </div>
           <div className="art-intro">
