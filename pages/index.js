@@ -1,3 +1,4 @@
+import Link from "next/link";
 import HeroDivs from "../components/HeroDivs";
 import Client from "../contentful/Contentful";
 import SocialLinks from "../components/SocialLinks";
@@ -51,8 +52,15 @@ function Home({ talksContents, articleContents, links, details }) {
         <div>
           <HeroDivs details={details} />
         </div>
+        <div className="viewtalkBtn">
+          <Link href="/talks">
+            <p>
+              view talks <span> &#8611; </span>
+            </p>
+          </Link>
+        </div>
       </div>
-      {/* <div style={{ backgroundColor: "red" }}>view talks --</div> */}
+
       <div className="pengs">
         <div>{Left}</div>
         <div className="center">{Center}</div>
