@@ -321,7 +321,7 @@ hr {
     font-size: medium;
   }
   li {
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
   }
   .logo {
     margin-left: 5%;
@@ -392,7 +392,7 @@ hr {
     font-weight: lighter;
   }
   .footer {
-    padding: 5%;
+    padding: 1%;
   }
 }
 
