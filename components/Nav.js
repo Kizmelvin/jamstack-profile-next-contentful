@@ -1,25 +1,32 @@
 import Link from "next/link";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 function Nav() {
+  const [navOpen, setNavOpen] = useState(false);
+
+  const handleNav = () => {
+    setNavOpen(!navOpen);
+  };
+
   const navlinks = (
-    <ul className="header-links">
-      <li>
+    <ul className={!navOpen ? "navLinks" : "navLinks open"}>
+      <li onClick={() => setNavOpen(false)}>
         <Link href="/">
           <a>Home</a>
         </Link>
       </li>
-      <li>
+      <li onClick={() => setNavOpen(false)}>
         <Link href="/about">
           <a>About</a>
         </Link>
       </li>
-      <li>
+      <li onClick={() => setNavOpen(false)}>
         <Link href="/talks">
           <a>Talks</a>
         </Link>
       </li>
-      <li>
+      <li onClick={() => setNavOpen(false)}>
         <Link href="/articles">
           <a>Articles</a>
         </Link>
@@ -28,19 +35,20 @@ function Nav() {
   );
 
   return (
-    <nav className="nav">
+    <nav>
       <Link href="/">
         <h1 className="logo">Ekene</h1>
       </Link>
-      <div className="right-nav">{navlinks}</div>
-
-      {/* <div className="right-nav">{navlinks}</div> */}
-      {/* <div className="menu-icon">
-        <input type="checkbox" id="check" />
-        <label htmlFor="check">
-          <FaBars />
+      {navlinks}
+      <div>
+        <label className="label">
+          {!navOpen ? (
+            <FaBars onClick={handleNav} />
+          ) : (
+            <FaTimes onClick={handleNav} />
+          )}
         </label>
-      </div> */}
+      </div>
     </nav>
   );
 }

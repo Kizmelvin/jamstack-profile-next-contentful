@@ -82,26 +82,31 @@ li :hover {
 /* end of container && main styles */
 /* nav styles */
 nav {
+  /* display: flex; */
   color: var(--PrimaryBlack);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   border-bottom: 1px solid rgb(235, 235, 235);
   position: fixed;
   width: 100%;
-  /* margin-bottom: 10%; */
+  height: 80px;
   background-color: rgb(243, 243, 243);
 }
-.logo {
-  margin-left: -10%;
-  cursor: pointer;
+nav h1 {
+  padding-left: 5%;
 }
-.nav ul {
+
+.navLinks {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 35%;
+  height: 70px;
+  margin-left: auto;
+  margin-top: -62px;
 }
-.nav ul li {
-  letter-spacing: 1px;
+.label {
+  display: none;
 }
+
 /* end of nav styles */
 
 /* hero/header styles */
@@ -129,7 +134,7 @@ nav {
   text-align: justify;
 }
 
-.heroDiv-section div:not(:first-child, :last-child) {
+.heroDiv-section div:nth-child(2) {
   margin: 0 1%;
   font-family: var(--SecondaryFF);
   font-style: normal;
@@ -146,7 +151,6 @@ nav {
   left: 37%;
   color: rgba(235, 235, 235, 0.8);
   font-family: var(--SecondaryFF);
-  /* padding: 0.5rem; */
   cursor: pointer;
 }
 .viewtalkBtn span {
@@ -243,7 +247,6 @@ nav {
   font-weight: normal;
   font-size: 16px;
   line-height: 110.43%;
-  /* background-color: aqua; */
   background: rgba(239, 244, 245, 0.972);
   padding: 0.3rem;
   width: 100px;
@@ -286,7 +289,6 @@ hr {
   align-items: center;
   justify-content: center;
   margin-bottom: -3%;
-  /* margin-top: 2%; */
   height: 30px;
 }
 .footer ul {
@@ -306,31 +308,10 @@ hr {
 /* end of footer styles */
 
 @media (max-width: 480px) {
-  nav {
-    display: block;
-    align-items: center;
-    border-bottom: 1px solid rgb(235, 235, 235);
-  }
-  nav ul {
-    display: flex;
-    position: absolute;
-    /* bottom: 1%; */
-    top: 0;
-    left: 15%;
-    text-align: center;
-    font-size: medium;
-  }
-  li {
-    /* margin-bottom: 1.5rem; */
-  }
-  .logo {
-    margin-left: 5%;
-  }
   .about-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     width: 80%;
     align-items: center;
     padding: 0.5rem;
@@ -342,7 +323,6 @@ hr {
   .heroDiv-section {
     display: flex;
     flex-direction: column;
-
     margin-left: 1%;
     margin-top: 1%;
   }
@@ -397,6 +377,34 @@ hr {
 }
 
 @media (max-width: 768px) {
+  .navLinks {
+    position: fixed;
+    flex-direction: column;
+    font-size: 20px;
+    margin-top: 0;
+    background: rgb(200, 231, 245);
+    color: white;
+    height: 100%;
+    width: 100%;
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    transition: 1s all ease-out;
+    pointer-events: none;
+  }
+  .open {
+    clip-path: circle(1200px at 90% -20%);
+    -webkit-clip-path: circle(1200px at 90% -20%);
+    pointer-events: all;
+  }
+  .label {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    font-size: 20px;
+    transform: translate(-5%, -50%);
+  }
+
   .about-div {
     display: flex;
     flex-direction: column;
@@ -421,8 +429,9 @@ hr {
     width: 80%;
   }
   .header_section img {
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 80%;
+    margin-left: 15%;
   }
   .heroDiv-section div:not(:first-child) {
     display: none;
@@ -447,7 +456,13 @@ hr {
   .talk-list h3 {
     font-size: x-large;
   }
+  .read-more,
+  .view-more {
+    font-size: small;
+    font-weight: normal;
+  }
 }
+
 @media (max-width: 1024px) {
   .about-div {
     display: flex;
@@ -461,6 +476,7 @@ hr {
     display: none;
   }
 }
+
 @media (max-width: 1200px) and (min-width: 769px) {
   .heroDiv-section div:not(:first-child) {
     display: none;
